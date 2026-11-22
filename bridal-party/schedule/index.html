@@ -13,6 +13,7 @@
   <link rel="preload" href="../../assets/fonts/josefin-sans-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="../../assets/css/style.css">
 
+  <script src="../../assets/js/protect.js" defer></script>
 </head>
 <body class="has-pattern" data-root="../../">
   <header class="site-header">
@@ -25,12 +26,15 @@
   </header>
   <div class="page-bg">
   <main class="content" id="main">
-    <h1 class="title">SCHEDULE</h1>
-    <h2 class="sub">FRIDAY, JULY 9, 2027</h2>
-    <h2 class="sub">(TIMES SUBJECT TO CHANGE)</h2>
-    <dl class="schedule"><dt>3:00 PM</dt><dd>Rehearsal Prep</dd><dt>4:00 PM</dt><dd>Rehearsal</dd><dt>5:00 PM</dt><dd>Rehearsal Dinner</dd><dt>8:00 PM</dt><dd>Bachelor/ette Party</dd></dl>
-    <h2 class="sub">SATURDAY, JULY 10, 2027</h2>
-    <dl class="schedule"><dt>9:00 AM</dt><dd>Brunch/Get Ready</dd><dt>2:00 PM</dt><dd>Wedding Prep at Venue</dd><dt>3:00 PM</dt><dd>Bridal Party Photos</dd><dt>5:00 PM</dt><dd>Ceremony</dd></dl>  
+    <h1 class="title">BRIDAL PARTY</h1>
+    <form class="gate" hidden>
+      <p class="text text--center">This section is for the bridal party. Please enter the password to continue.</p>
+      <input class="input" type="password" aria-label="Password" autocomplete="current-password" style="margin-top: var(--sp-l)">
+      <p class="error"></p>
+      <div class="btn-row" style="margin-top: var(--sp-l)"><button class="btn" type="submit">Enter</button></div>
+    </form>
+    <noscript><p class="text text--center">Please turn on JavaScript to view this page.</p></noscript>
+    <template id="locked" data-iter="200000" data-salt="zeStU8U+ciOcCcTCcmi7xQ==" data-iv="y5apGmdqzp61U0EW" data-ct="4lI5754ngD75HixSmAc1L2JiWUtxiTftWbwKchoj9qC7XDz7al8nwm06Sl9/CoJNL6Obm5qxVRPejUKmOfWq7t3Kwu8dcki+sxaUVWsu9TvreaNl5fpVPWuhR7x4+Xzjw8MoF0SZ1+tlWnZZJ3ni/ap3+0XK8hoKhYHcclYujeArNPk+6Mhl2beCtfx2Rvtz1ZpF5JwOT/RlgX1vP5v0pKu+FB+XU52r5DHavCEo7UecHOhn16yBPS/xLY4xu/Bza0Ad95VprZ3UenPCZh1h0HCFxb+ifMaz1yzVF57obfM1hP6zlKmvDspoE+JWZ6EV4BFN103bHMni2CS0fLns4ezWkphrEqwXBLBz1mJddRYrlIwTzE+X4mcIjjVYOKpxxouNdbyFt2iW1+J8MJEt2i1LzwZoG/NK+vVH/9tzDPS6MLN8gvuK58vnu+HfrTVBTpYwORCQ1EnjiGGSRn0u3tLLdOtWOV1t/mZn/bOMkIuPkUlz6wBWL4FcXHuOJN79CWzR5J3zuZT1JCXhig5jMQo+SIrVFuYUSYX3R8HQv0pTAKjATyI6sQ+qp5MiKH4wsEyx6sOD38AEDNVHo1FmHqI1WIAGq/SKhDfcbmsXSJsAS01KMdoW/rRgFp/py+oveHXEbiU+xoUvaS5B+jBgfa10Fmi6hLP1rwbYOdw+GfgiTM7uciDbt1GVrub/te7jfJSZtfPgeUORvEAf3zGKkJr/TmLG4hB2NIH1iqyGdUiMLS51aVFgqR9yoy4xq8AGvQ=="></template>
   </main>
   </div>
 </body>

@@ -13,6 +13,7 @@
   <link rel="preload" href="../../assets/fonts/josefin-sans-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="../../assets/css/style.css">
 
+  <script src="../../assets/js/protect.js" defer></script>
 </head>
 <body class="has-pattern" data-root="../../">
   <header class="site-header">
@@ -25,14 +26,15 @@
   </header>
   <div class="page-bg">
   <main class="content" id="main">
-    <h1 class="title">GROOMSMEN DETAILS</h1>
-    <h2 class="title section-title">ATTIRE</h2>
-    <h3 class="sub">BIRDY GREY TAYLOR SUIT - TAN</h3>
-    <p class="text">Please purchase your suit at the following link:</p>
-    <div class="btn-row"><a class="btn" href="https://www.birdygrey.com/products/taylor-suit-tan" target="_blank" rel="noopener">Shop the Suit</a></div>
-    <h2 class="title section-title">LODGING</h2>
-    <h3 class="sub">AIRBNB</h3>
-    <p class="text">AJ and Jeff will coordinate an Airbnb close to the wedding venue where we will stay Friday night. If you prefer to stay in a hotel room with your significant other, please let us know.</p>
+    <h1 class="title">BRIDAL PARTY</h1>
+    <form class="gate" hidden>
+      <p class="text text--center">This section is for the bridal party. Please enter the password to continue.</p>
+      <input class="input" type="password" aria-label="Password" autocomplete="current-password" style="margin-top: var(--sp-l)">
+      <p class="error"></p>
+      <div class="btn-row" style="margin-top: var(--sp-l)"><button class="btn" type="submit">Enter</button></div>
+    </form>
+    <noscript><p class="text text--center">Please turn on JavaScript to view this page.</p></noscript>
+    <template id="locked" data-iter="200000" data-salt="zeStU8U+ciOcCcTCcmi7xQ==" data-iv="JHtCQRJ4vubXzodF" data-ct="DspKz1Gx4cA/f6cEeDZQTsub2/t7JN49Kr9lW+glmVv29FVukqzjLrzEAJSyjFQMwYEZkevFdzU2X6jXKNi4w7ZJli72aDV//1rnu1R0y5j/hOUPELbRQ7dJoEbDmHj5B1Qd7Krdj1SYw+SAjtDRhOtq+SxEkydHPsCZi61g/egTA5qiqNHuqsJC2JfFlr+MqTGzManTY/oE0vpdCVJHhmkcQI6EEQZTOfDE6V0xW6od5kg3FO8S3TIFglCfzv06fBf8qhOluzFjVkTePOtsIKEU9bFkv5D1Z/fEWps4ol/N6GLgRDjsC6AihxW2NCDPtZ1f4ZHqNymtvyfl9lqOQnDJYU4k3M3NevIPRLvQ24e7cKOTAevOZ6tDchi+fKanyseNq4dwF5IZIeqPV9rtcPfsfOuEgiNchPCBgediEuU2Rp27WGRKDnlJKeqTmYHNeiFQ7VwZqf6ZP0Y2jybyGtb5Q8+Z6kTgIXoJPmy5fRc/3SAdEdrZ8T8d/AzD9+3dMZlGD+nE7RkkJ5V04+CxoYdHwV/cX2sQyvV7FsJqrvwLJDyoL/wztBEVkFF2aHtYUNsIfR0tgZpEb2ELeOEFg8qeRDfClZXPAN+dnDt1pFmUSNR05FZEPx67JhJEObMcOF2sUBIp7kKXEyh2zdMsqwXg8XpnQtHgH8pgDgEBc54eAim9QuLvK2tY+X/GxZaolhHCVfiAdSONuWD+wYOORdKAj0Juao2Y/XeGmguisi1QIEZqdJXZEj933ww7gwhvGmeoMAsfbGJJoAmpoa7/fBPF199fJe/9vXna72vyAAhMA30zD9mCVYIYIIWSMsYuoqQeh693jRh364ME+JoN8LVuDabDXbHhD86p10jwntjxA+31USwoBlrcJlK0APNiWcU="></template>
   </main>
   </div>
 </body>

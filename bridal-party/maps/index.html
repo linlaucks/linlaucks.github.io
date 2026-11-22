@@ -13,6 +13,7 @@
   <link rel="preload" href="../../assets/fonts/josefin-sans-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="../../assets/css/style.css">
   <script src="../../assets/js/lightbox.js" defer></script>
+  <script src="../../assets/js/protect.js" defer></script>
 </head>
 <body class="has-pattern" data-root="../../">
   <header class="site-header">
@@ -25,14 +26,15 @@
   </header>
   <div class="page-bg">
   <main class="content" id="main">
-    <figure class="media">
-      <button type="button" class="zoomable" data-full="../../assets/img/map-bridal-full.webp" aria-label="Enlarge: Local map showing The Carleton of Oak Park Hotel, Columbus Park Refectory, Schuth&#x27;s Grove #2 for the rehearsal and dinner, and nearby CTA stations">
-        <img src="../../assets/img/map-bridal.webp" alt="Local map showing The Carleton of Oak Park Hotel, Columbus Park Refectory, Schuth&#x27;s Grove #2 for the rehearsal and dinner, and nearby CTA stations" width="1200" height="1157" decoding="async">
-      </button>
-    </figure>
-    <h1 class="title">DETAILS</h1>
-    <h2 class="sub">AIRBNB LOCATIONS</h2>
-    <p class="text">We have not yet confirmed the exact Airbnb locations, but will add them to the map when we have more information.</p>
+    <h1 class="title">BRIDAL PARTY</h1>
+    <form class="gate" hidden>
+      <p class="text text--center">This section is for the bridal party. Please enter the password to continue.</p>
+      <input class="input" type="password" aria-label="Password" autocomplete="current-password" style="margin-top: var(--sp-l)">
+      <p class="error"></p>
+      <div class="btn-row" style="margin-top: var(--sp-l)"><button class="btn" type="submit">Enter</button></div>
+    </form>
+    <noscript><p class="text text--center">Please turn on JavaScript to view this page.</p></noscript>
+    <template id="locked" data-iter="200000" data-salt="zeStU8U+ciOcCcTCcmi7xQ==" data-iv="D0h9xMyYfZaFzT7T" data-ct="qloQEYc+/V0MeJUIWoDsNqNai+l9fy74v9hovXZ85RXC+zzLLAlf8aZ833IqxC76nvvwxhMiddsF0JQeHisXc67FUum/qR/SmX4zzl4rGfhy5+ZdfkLkSrZNEf59Uub0YwhHUfeuUE8gZPRmpw3p0pM1s1DDHtPxrd+9n/JVW+oAivhj7bx0YSWy9kjWZtjbrp9p3Szvtjc5aGcCbnBbooQjlvOdsTg3ad1IBbdb3CcrJOKwxZ7/XK4POzWwyAWdC+RA/H73h9wAUCYI7TiEAmDcyFg46rylUS5uptkACDK/r5KmthLdmOstnXdagMa8DsFf3/UUGnyTNUOHR9fpU+dDSCMSwkvnq9+dYu8LT1D3xNZx6H1C4WU0xpRAMeKOSQ+hWFxmHeNghY27WlUZZaKMKqWeau4+m9zvlCng9Wf5QQL5uWFDwmFE/l4rcO2BsnvuaZdHnsTE8UkrPluVLGlN/E0Hf8uj8RIkKO1RTuLITpsx5qN8Gz0WYzQEpGPajYHqg24zCU4OiLq8LeOjJX3YxVpm3cn8dvlTaundEto3P2H21stq4EySZFhUaCDorGLyb+Rrax4RibfkmTzuEhCeQzm9GE6DnL38Wgln+kYKeU2yFYtAsq7i6jo/+bSmuucliiemQU1h7h3E7Q/EBh6rGbri0deYNWw2UBZ/q6kYP8ZURQvlLGwrR5j0+Wn2NBXTi1H2T56xxrT8D/stxJ3Y4ar8HVYSPG9j2yFCCU1hPNIZa2bYdwylON1ZSdvpio+0T/wOQz8rqOWnYj1MKHM7+Pw2dLD/utkedQ1Fa0SdLZLSOwDaJZWwLCIZeqZygeBafKnJyYzDIf39tRlVg3uM0aDU603kDPcqIqBceoDukvKwmPD6krKQJrCDfoJTFsV94ti8EXa9xBVUGUwShfe9/Of8YNb9Vl042mfKOyM2NOnm2b9GrbbfzMcy9cKRokcdANenSEILF13F+K26t1NmJiyqOTvuewUqIvuE2KZXm7bhf1kXMQp1USu5T7VDCeAd+5KFTp7wnf716rVyIAIwAc89KngComNVsw/SIisqfPQVOLAI4g=="></template>
   </main>
   </div>
 </body>

@@ -13,6 +13,7 @@
   <link rel="preload" href="../assets/fonts/josefin-sans-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="../assets/css/style.css">
 
+  <script src="../assets/js/protect.js" defer></script>
 </head>
 <body class="has-pattern" data-root="../">
   <header class="site-header">
@@ -25,7 +26,15 @@
   </header>
   <div class="page-bg">
   <main class="content" id="main">
-    <ul class="title-list"><li><a class="title" href="schedule/">SCHEDULE</a></li><li><a class="title" href="maps/">DETAILS</a></li><li><a class="title" href="groomsmen/">GROOMSMEN</a></li><li><a class="title" href="bridesmaids/">BRIDESMAIDS</a></li></ul>
+    <h1 class="title">BRIDAL PARTY</h1>
+    <form class="gate" hidden>
+      <p class="text text--center">This section is for the bridal party. Please enter the password to continue.</p>
+      <input class="input" type="password" aria-label="Password" autocomplete="current-password" style="margin-top: var(--sp-l)">
+      <p class="error"></p>
+      <div class="btn-row" style="margin-top: var(--sp-l)"><button class="btn" type="submit">Enter</button></div>
+    </form>
+    <noscript><p class="text text--center">Please turn on JavaScript to view this page.</p></noscript>
+    <template id="locked" data-iter="200000" data-salt="zeStU8U+ciOcCcTCcmi7xQ==" data-iv="nQJbkQyihYGfSGfK" data-ct="YA+nnFLZQouSu4njuHdgALO8HSbSswHRvITVn4bMX/Z7l6qtOX6HJcqZ4AZ9oNaHymPbSWjaBkw+0edfD8iLwJCIt4MM5SBDQHDjl1EjuzM6OfjZRZ49NlHMYy2NQpm0Z8lWBKKDGQ+zPe5/6pCT5thJqXBdxtd6FIkoRaa1s+C6Kx5QZzw8VXDmi4/04v61QLGQ8fS8M2T+M9Z7YdR2k7YdYhYbOePJRs3higU3jlNxLmHMtbzb+3OwKNk/Jm3GOD8anJuGWYNidOCWhr41L47XOR2UsbpF+v7UTwds/qXc8io74F4dp8eJ2f1Vc//bLcU3AEymcu6yLZXIWrtndUq34KdjCfjg9mgK"></template>
   </main>
   </div>
 </body>
