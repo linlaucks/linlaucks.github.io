@@ -30,7 +30,7 @@
   /* Type scale (design pt values) */
   --fs-nav-title: calc(30 * var(--u));
   --fs-nav-link: calc(18 * var(--u));
-  --fs-title: calc(35 * var(--u));
+  --fs-title: calc(42 * var(--u));
   --fs-sub: calc(25 * var(--u));
   --fs-text: calc(20 * var(--u));
   --fs-question: calc(25 * var(--u));
