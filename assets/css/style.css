@@ -1,11 +1,11 @@
 /* Fonts: Cormorant & Josefin Sans (SIL Open Font License), hosted with the site */
-@font-face { font-family: "Cormorant"; font-style: italic; font-weight: 500; font-display: swap; src: url("../fonts/cormorant-latin-500-italic.woff2") format("woff2"); }
 @font-face { font-family: "Cormorant"; font-style: italic; font-weight: 600; font-display: swap; src: url("../fonts/cormorant-latin-600-italic.woff2") format("woff2"); }
 @font-face { font-family: "Cormorant"; font-style: italic; font-weight: 700; font-display: swap; src: url("../fonts/cormorant-latin-700-italic.woff2") format("woff2"); }
+@font-face { font-family: "Josefin Sans"; font-style: normal; font-weight: 300; font-display: swap; src: url("../fonts/josefin-sans-latin-300-normal.woff2") format("woff2"); }
+@font-face { font-family: "Josefin Sans"; font-style: italic; font-weight: 300; font-display: swap; src: url("../fonts/josefin-sans-latin-300-italic.woff2") format("woff2"); }
 @font-face { font-family: "Josefin Sans"; font-style: normal; font-weight: 400; font-display: swap; src: url("../fonts/josefin-sans-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Josefin Sans"; font-style: normal; font-weight: 500; font-display: swap; src: url("../fonts/josefin-sans-latin-500-normal.woff2") format("woff2"); }
 @font-face { font-family: "Josefin Sans"; font-style: normal; font-weight: 600; font-display: swap; src: url("../fonts/josefin-sans-latin-600-normal.woff2") format("woff2"); }
-@font-face { font-family: "Josefin Sans"; font-style: normal; font-weight: 700; font-display: swap; src: url("../fonts/josefin-sans-latin-700-normal.woff2") format("woff2"); }
-@font-face { font-family: "Josefin Sans"; font-style: italic; font-weight: 600; font-display: swap; src: url("../fonts/josefin-sans-latin-600-italic.woff2") format("woff2"); }
 
 /* =========================================================
    Joyce Lin + Ayrton Laucks — wedding site
@@ -41,19 +41,27 @@
   --sp-xs: calc(6 * var(--u));
   --sp-s: calc(13 * var(--u));
   --sp-m: calc(17 * var(--u));
-  --sp-l: calc(21 * var(--u));
-  --sp-xl: calc(34 * var(--u));
+  --sp-l: calc(19 * var(--u));
+  --sp-xl: calc(28 * var(--u));
   --sp-xxl: calc(62 * var(--u));
 
-  --column: calc(410 * var(--u));
+  /* Everything lines up with the edges of "JOYCE LIN + AYRTON LAUCKS".
+     The title is --title-ratio times its font size wide (measured). */
+  --title-ratio: 12.66;
+  --frame: calc(var(--fs-nav-title) * var(--title-ratio));
+  --column: var(--frame);
   --line: 1.04;
+  /* Content text weight. The web version of Josefin Sans runs heavier than
+     the copy in the design files, so every weight here was picked by
+     measuring the mockups against each web weight. */
+  --w-text: 300;
 }
 
 @media (max-width: 700px) {
   :root {
     --u: 0.75px;
     --fs-text: 15px;
-    --column: calc(100vw - 56px);
+    --fs-nav-title: calc(78vw / var(--title-ratio));
   }
 }
 
@@ -104,11 +112,17 @@ a { color: inherit; }
   text-align: center;
 }
 
+.nav-frame {
+  width: var(--frame);
+  margin: 0 auto;
+}
+.is-home { --title-ratio: 12.73; --frame: calc(var(--fs-nav-title) * 12.73); } /* bold title is slightly wider */
+
 .nav-title {
-  display: inline-block;
+  display: block;
   font-family: var(--serif);
   font-style: italic;
-  font-weight: 500;
+  font-weight: 600;
   font-size: var(--fs-nav-title);
   line-height: 1.15;
   text-decoration: none;
@@ -119,6 +133,8 @@ a { color: inherit; }
 .is-home .nav-title { font-weight: 700; }
 
 .nav-links {
+  display: flex;
+  justify-content: space-between;
   margin-top: calc(5 * var(--u));
   font-size: var(--fs-nav-link);
   line-height: 1.2;
@@ -126,21 +142,15 @@ a { color: inherit; }
 }
 .nav-links a {
   text-decoration: none;
-  font-weight: 400;
+  font-weight: 300;
 }
-.nav-links a[aria-current] { font-weight: 700; }
+.nav-links a[aria-current] { font-weight: 500; }
 .nav-links a:hover { text-decoration: underline; text-underline-offset: 0.2em; }
-.nav-links .sep {
-  display: inline-block;
-  padding: 0 calc(25 * var(--u));
-  color: var(--ink);
-}
+.nav-links .sep { color: var(--ink); font-weight: 300; }
 
 @media (max-width: 700px) {
   .nav-band { padding-top: 16px; padding-bottom: 11px; }
-  .nav-title { font-size: clamp(19px, 5.6vw, 24px); }
-  .nav-links { font-size: clamp(12.5px, 3.6vw, 15px); margin-top: 6px; }
-  .nav-links .sep { padding: 0 clamp(6px, 2.4vw, 12px); }
+  .nav-links { font-size: clamp(12px, 3.5vw, 15px); margin-top: 6px; }
 }
 
 /* ---------- Patterned background (all pages except home) ---------- */
@@ -166,12 +176,12 @@ a { color: inherit; }
   flex: 1 0 auto;
   width: var(--column);
   margin: 0 auto;
-  padding: calc(56 * var(--u)) 0 calc(44 * var(--u));
+  padding: calc(36 * var(--u)) 0 calc(30 * var(--u));
   display: flex;
   flex-direction: column;
 }
 @media (max-width: 700px) {
-  .content { padding-top: 40px; padding-bottom: 48px; }
+  .content { padding-top: 30px; padding-bottom: 36px; }
 }
 
 .title {
@@ -189,24 +199,23 @@ a { color: inherit; }
 .sub {
   margin: 0;
   font-family: var(--sans);
-  font-weight: 700;
+  font-weight: 400;
   font-size: var(--fs-sub);
   line-height: 1.2;
   text-transform: uppercase;
   text-align: center;
-  margin-left: calc(-60 * var(--u));
-  margin-right: calc(-60 * var(--u));
 }
 
 .text {
   margin: 0;
-  font-weight: 600;
+  font-weight: var(--w-text);
   font-size: var(--fs-text);
   line-height: var(--line);
   color: var(--muted);
 }
 .text a { color: inherit; }
-a[href^="tel:"] { text-decoration: none; }
+a[href^="tel:"] { text-decoration: none; white-space: nowrap; }
+.nowrap { white-space: nowrap; }
 .text--center { text-align: center; }
 
 /* Vertical rhythm */
@@ -237,7 +246,7 @@ a[href^="tel:"] { text-decoration: none; }
   padding: 0;
   list-style: none;
   color: var(--muted);
-  font-weight: 600;
+  font-weight: var(--w-text);
 }
 .list li {
   position: relative;
@@ -256,7 +265,7 @@ a[href^="tel:"] { text-decoration: none; }
   list-style: none;
   text-align: center;
   color: var(--muted);
-  font-weight: 600;
+  font-weight: var(--w-text);
 }
 
 /* Schedules */
@@ -268,7 +277,7 @@ a[href^="tel:"] { text-decoration: none; }
   margin: 0;
   padding-left: 0;
   color: var(--muted);
-  font-weight: 600;
+  font-weight: var(--w-text);
 }
 .schedule dt { font-style: italic; }
 .schedule dd { margin: 0; text-transform: uppercase; letter-spacing: 0.03em; }
@@ -292,9 +301,8 @@ a[href^="tel:"] { text-decoration: none; }
 /* ---------- Media (maps / plans) ---------- */
 
 .media {
-  width: calc(372 * var(--u));
-  max-width: 100%;
-  margin: 0 auto calc(34 * var(--u));
+  width: 100%;
+  margin: 0 auto calc(28 * var(--u));
 }
 .zoomable {
   display: block;
@@ -311,7 +319,7 @@ a[href^="tel:"] { text-decoration: none; }
   text-align: center;
   font-size: calc(var(--fs-text) * 0.8);
   color: var(--muted);
-  font-weight: 600;
+  font-weight: var(--w-text);
 }
 
 /* ---------- Buttons ---------- */
@@ -332,7 +340,7 @@ a[href^="tel:"] { text-decoration: none; }
   background: var(--ink);
   color: var(--white);
   font-family: var(--sans);
-  font-weight: 600;
+  font-weight: 400;
   font-size: var(--fs-button);
   line-height: 1.2;
   text-align: center;
@@ -377,7 +385,9 @@ a[href^="tel:"] { text-decoration: none; }
   position: absolute;
   left: 50%;
   top: 22%;
-  width: clamp(300px, 24vw, 640px);
+  /* the lettering inside date.png spans 80% of the file, so this makes the
+     date 96% as wide as the names in the nav, as in the mockups */
+  width: calc(var(--frame) * 1.2);
   transform: translate(-50%, -53%);
   z-index: 2;
   pointer-events: none;
@@ -385,7 +395,7 @@ a[href^="tel:"] { text-decoration: none; }
 .hero-date img { width: 100%; }
 
 @media (max-width: 700px) {
-  .hero-date { width: 86vw; top: 20%; }
+  .hero-date { top: 20%; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -410,7 +420,7 @@ a[href^="tel:"] { text-decoration: none; }
   padding: 0;
   margin: 0;
   font-size: var(--fs-question);
-  font-weight: 400;
+  font-weight: 300;
   line-height: var(--line);
   color: var(--ink);
 }
@@ -418,7 +428,7 @@ a[href^="tel:"] { text-decoration: none; }
 .help + .help { margin-top: var(--sp-s); }
 .help {
   margin: 0;
-  font-weight: 600;
+  font-weight: var(--w-text);
   color: var(--muted);
 }
 .question + .input,
@@ -513,11 +523,12 @@ textarea.input {
 /* Two-column checkbox grid (dietary) */
 .check-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
   gap: calc(14 * var(--u)) var(--sp-m);
   margin-top: var(--sp-l);
 }
-.check-grid .option { justify-content: flex-start; }
+.check-grid .option { justify-content: flex-start; letter-spacing: 0; font-size: calc(19 * var(--u)); gap: calc(11 * var(--u)); }
 .check-grid + .check-grid { margin-top: var(--sp-xl); }
 .other-row {
   display: flex;
@@ -630,6 +641,4 @@ body.lightbox-open { overflow: hidden; }
 .hero-slide:nth-of-type(4) { object-position: 55% 50%; }
 .hero-slide:nth-of-type(5) { object-position: 56% 50%; }
 
-@media (max-width: 700px) {
-  .sub { margin-left: -12px; margin-right: -12px; }
-}
+
