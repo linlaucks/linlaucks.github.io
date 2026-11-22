@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>RSVP | Joyce Lin + Ayrton Laucks</title>
+  <meta name="description" content="Wedding of Joyce Lin and Ayrton Laucks, 10 July 2027, Columbus Park Refectory, Chicago, IL.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#f3e3d3">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/icon-32.png">
+  <link rel="apple-touch-icon" href="../assets/img/icon-180.png">
+  <link rel="preload" href="../assets/fonts/cormorant-latin-500-italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/josefin-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/rsvp.js" defer></script>
+</head>
+<body class="has-pattern rsvp-page" data-root="../">
+  <header class="site-header">
+    <div class="nav-band">
+      <a class="nav-title" href="../">JOYCE LIN<span class="plus">+</span>AYRTON LAUCKS</a>
+      <nav class="nav-links" aria-label="Main"><a href="../details/">Details</a><span class="sep" aria-hidden="true">-</span><a href="../rsvp/" aria-current="page">RSVP</a><span class="sep" aria-hidden="true">-</span><a href="../bridal-party/">Bridal Party</a><span class="sep" aria-hidden="true">-</span><a href="../registry/">Registry</a></nav>
+    </div>
+  </header>
+  <div class="page-bg">
+  <main class="content" id="main">
+    <h1 class="title">RSVP</h1>
+    <form class="rsvp-form" data-step="start" novalidate>
+      
+      <div class="field">
+        <label class="question" for="email">Email:</label>
+        <input class="input" type="email" id="email" name="email" autocomplete="email" required>
+        <p class="error" data-error-for="email"></p>
+      </div>
+      <fieldset class="field" data-field="attending"><legend class="question">Will you be attending?</legend><div class="options"><label class="option"><input type="radio" name="attending" value="Yes" required><span>YES</span></label><label class="option"><input type="radio" name="attending" value="No" required><span>NO</span></label></div><p class="error" data-error-for="attending"></p></fieldset>
+      <div class="attending-only">
+        <div class="field">
+          <label class="question" for="names">Please list the names of those on the invitation who will be attending:</label>
+          <textarea class="input" id="names" name="names" rows="2" autocomplete="name"></textarea>
+          <p class="error" data-error-for="names"></p>
+        </div>
+        <fieldset class="field" data-field="role"><legend class="question">Were you also invited to serve a specific role?</legend><p class="help">Includes maid of honor, best man, bridesmaid, groomsman, officiant, flower girl, parents of the bride, parents of the groom.</p><div class="options"><label class="option"><input type="radio" name="role" value="Yes"><span>YES</span></label><label class="option"><input type="radio" name="role" value="No"><span>NO</span></label></div><p class="error" data-error-for="role"></p></fieldset>
+      </div>
+      <div class="hp" aria-hidden="true"><label>Leave this empty <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+      <div class="form-actions">
+        <div class="btn-row"><button type="submit" class="btn" data-action="next">Next</button></div>
+        <p class="error form-status" role="alert"></p>
+      </div>
+    </form>
+  </main>
+  </div>
+</body>
+</html>
