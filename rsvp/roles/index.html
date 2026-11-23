@@ -21,14 +21,14 @@
     <div class="nav-band">
       <div class="nav-frame">
         <a class="nav-title" href="../../" data-zh="林琦悦&lt;span class=&quot;plus&quot;&gt;+&lt;/span&gt;柳艾奇">JOYCE LIN<span class="plus">+</span>AYRTON LAUCKS</a>
-        <nav class="nav-links" aria-label="Main" data-zh-aria-label="主菜单"><a href="../../details/" data-zh="婚礼信息">Details</a><span class="sep" aria-hidden="true">-</span><a href="../../rsvp/" aria-current="page" data-zh="回复出席">RSVP</a><span class="sep" aria-hidden="true">-</span><a href="../../bridal-party/" data-zh="伴郎伴娘">Bridal Party</a><span class="sep" aria-hidden="true">-</span><a href="../../registry/" data-zh="礼物清单">Registry</a></nav>
+        <nav class="nav-links" aria-label="Main" data-zh-aria-label="主菜单"><a href="../../details/" data-zh="婚礼信息">Details</a><span class="sep" aria-hidden="true">-</span><a href="../../rsvp/" aria-current="page" data-zh="敬请回复">RSVP</a><span class="sep" aria-hidden="true">-</span><a href="../../bridal-party/" data-zh="伴郎伴娘">Bridal Party</a><span class="sep" aria-hidden="true">-</span><a href="../../registry/" data-zh="礼物清单">Registry</a></nav>
       </div>
       <button type="button" class="lang-toggle" data-lang-toggle lang="zh-Hans" aria-label="Switch to Chinese" data-zh-aria-label="切换至英文" data-zh="EN">中文</button>
     </div>
   </header>
   <div class="page-bg">
   <main class="content" id="main">
-    <h1 class="title" data-zh="回复出席">RSVP</h1>
+    <h1 class="title" data-zh="敬请回复">RSVP</h1>
     <form class="rsvp-form" data-step="roles" novalidate>
       
       <div class="intro">
@@ -38,7 +38,10 @@
         <p class="help" data-zh="其他角色与职责将个别告知。请参阅网站上的“伴郎伴娘”页面，了解活动流程及服装、住宿等细节。">Additional roles/responsibilities will be communicated to each person individually. See the “Bridal Party” pages on the website for the schedule of events and details including attire and Bridal Party lodging.</p>
       </div>
       <fieldset class="field" data-field="rehearsal"><legend class="question" data-zh="您会参加彩排晚宴吗？">Will you attend the rehearsal dinner?</legend><div class="options"><label class="option"><input type="radio" name="rehearsal" value="Yes"><span data-zh="是">YES</span></label><label class="option"><input type="radio" name="rehearsal" value="No"><span data-zh="否">NO</span></label></div><p class="error" data-error-for="rehearsal"></p></fieldset>
-      <fieldset class="field" data-field="rehearsalOthers"><legend class="question" data-zh="您的邀请函上是否还有其他人会参加彩排晚宴？">Are there any others on your invitation who are planning to attend the rehearsal dinner?</legend><div class="options"><label class="option"><input type="radio" name="rehearsalOthers" value="Yes"><span data-zh="是">YES</span></label><label class="option"><input type="radio" name="rehearsalOthers" value="No"><span data-zh="否">NO</span></label></div><p class="error" data-error-for="rehearsalOthers"></p></fieldset>
+      <div class="field">
+        <label class="question" for="rehearsalOthers" data-zh="您的邀请函上还有几位会参加彩排晚宴？">How many others on your invitation will be attending the rehearsal dinner?</label>
+        <input class="input" type="text" id="rehearsalOthers" name="rehearsalOthers" inputmode="numeric" pattern="[0-9]*" autocomplete="off">
+      </div>
       <fieldset class="field" data-field="airbnb"><legend class="question" data-zh="伴娘与伴郎将分别入住场地附近的 Airbnb。您是否打算入住 Airbnb？">The bridesmaids and groomsmen will each get an Airbnb close to the venue. Do you plan on staying in the Airbnb?</legend><div class="options options--3"><label class="option"><input type="radio" name="airbnb" value="Yes"><span data-zh="是">YES</span></label><label class="option"><input type="radio" name="airbnb" value="No"><span data-zh="否">NO</span></label><label class="option"><input type="radio" name="airbnb" value="N/A"><span data-zh="不适用">N/A</span></label></div><p class="error" data-error-for="airbnb"></p></fieldset>
       <div class="hp" aria-hidden="true"><label>Leave this empty <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
       <div class="form-actions">
