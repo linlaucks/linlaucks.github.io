@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>RSVP | Joyce Lin + Ayrton Laucks</title>
+  <script>try{if(localStorage.getItem('linlaucks-lang')==='zh'){var h=document.documentElement;h.classList.add('zh','i18n-pending');h.lang='zh-Hans';setTimeout(function(){h.classList.remove('i18n-pending')},2500)}}catch(e){}</script>
+  <title data-zh="回复出席 | Joyce Lin + Ayrton Laucks">RSVP | Joyce Lin + Ayrton Laucks</title>
   <meta name="description" content="Wedding of Joyce Lin and Ayrton Laucks, 10 July 2027, Columbus Park Refectory, Chicago, IL.">
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#f3e3d3">
@@ -12,27 +13,29 @@
   <link rel="preload" href="../../assets/fonts/cormorant-latin-600-italic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="../../assets/fonts/josefin-sans-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="../../assets/css/style.css">
+  <script src="../../assets/js/i18n.js" defer></script>
   <script src="../../assets/js/rsvp.js" defer></script>
 </head>
 <body class="has-pattern rsvp-page" data-root="../../">
   <header class="site-header">
     <div class="nav-band">
       <div class="nav-frame">
-        <a class="nav-title" href="../../">JOYCE LIN<span class="plus">+</span>AYRTON LAUCKS</a>
-        <nav class="nav-links" aria-label="Main"><a href="../../details/">Details</a><span class="sep" aria-hidden="true">-</span><a href="../../rsvp/" aria-current="page">RSVP</a><span class="sep" aria-hidden="true">-</span><a href="../../bridal-party/">Bridal Party</a><span class="sep" aria-hidden="true">-</span><a href="../../registry/">Registry</a></nav>
+        <a class="nav-title" href="../../" data-zh="林琦悦&lt;span class=&quot;plus&quot;&gt;+&lt;/span&gt;柳艾奇">JOYCE LIN<span class="plus">+</span>AYRTON LAUCKS</a>
+        <nav class="nav-links" aria-label="Main" data-zh-aria-label="主菜单"><a href="../../details/" data-zh="婚礼信息">Details</a><span class="sep" aria-hidden="true">-</span><a href="../../rsvp/" aria-current="page" data-zh="回复出席">RSVP</a><span class="sep" aria-hidden="true">-</span><a href="../../bridal-party/" data-zh="伴郎伴娘">Bridal Party</a><span class="sep" aria-hidden="true">-</span><a href="../../registry/" data-zh="礼物清单">Registry</a></nav>
       </div>
+      <button type="button" class="lang-toggle" data-lang-toggle lang="zh-Hans" aria-label="Switch to Chinese" data-zh-aria-label="切换至英文" data-zh="EN">中文</button>
     </div>
   </header>
   <div class="page-bg">
   <main class="content" id="main">
-    <h1 class="title">RSVP</h1>
+    <h1 class="title" data-zh="回复出席">RSVP</h1>
     <form class="rsvp-form" data-step="hotel" novalidate>
       
-      <fieldset class="field" data-field="hotel"><legend class="question">Do you require hotel accommodation?</legend><p class="help">We have a courtesy block of hotel rooms in The Carleton of Oak Park Hotel. Please call the hotel directly at <a href="tel:+17088485000">(708) 848-5000</a> and mention the group name <span class="nowrap">LIN-LAUCKS</span> to reserve a room.</p><div class="options"><label class="option"><input type="radio" name="hotel" value="Yes"><span>YES</span></label><label class="option"><input type="radio" name="hotel" value="No"><span>NO</span></label></div><p class="error" data-error-for="hotel"></p></fieldset>
-      <fieldset class="field" data-field="roommate"><legend class="question">Would you like to be put in touch with other guests to share a room?</legend><p class="help">We will put together a list of attendees so that you can coordinate accommodation.</p><div class="options"><label class="option"><input type="radio" name="roommate" value="Yes"><span>YES</span></label><label class="option"><input type="radio" name="roommate" value="No"><span>NO</span></label></div><p class="error" data-error-for="roommate"></p></fieldset>
+      <fieldset class="field" data-field="hotel"><legend class="question" data-zh="您需要酒店住宿吗？">Do you require hotel accommodation?</legend><p class="help" data-zh="我们在 The Carleton of Oak Park Hotel 预留了优惠房间。请直接致电酒店 &lt;a href=&quot;tel:+17088485000&quot;&gt;(708) 848-5000&lt;/a&gt;，并告知团体名称 &lt;span class=&quot;nowrap&quot;&gt;LIN-LAUCKS&lt;/span&gt; 以预订房间。">We have a courtesy block of hotel rooms in The Carleton of Oak Park Hotel. Please call the hotel directly at <a href="tel:+17088485000">(708) 848-5000</a> and mention the group name <span class="nowrap">LIN-LAUCKS</span> to reserve a room.</p><div class="options"><label class="option"><input type="radio" name="hotel" value="Yes"><span data-zh="是">YES</span></label><label class="option"><input type="radio" name="hotel" value="No"><span data-zh="否">NO</span></label></div><p class="error" data-error-for="hotel"></p></fieldset>
+      <fieldset class="field" data-field="roommate"><legend class="question" data-zh="您是否希望我们协助联系其他宾客合住一间房？">Would you like to be put in touch with other guests to share a room?</legend><p class="help" data-zh="我们会整理一份出席名单，方便您协调住宿。">We will put together a list of attendees so that you can coordinate accommodation.</p><div class="options"><label class="option"><input type="radio" name="roommate" value="Yes"><span data-zh="是">YES</span></label><label class="option"><input type="radio" name="roommate" value="No"><span data-zh="否">NO</span></label></div><p class="error" data-error-for="roommate"></p></fieldset>
       <div class="hp" aria-hidden="true"><label>Leave this empty <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
       <div class="form-actions">
-        <div class="btn-row"><button type="button" class="btn" data-action="back">Back</button><button type="submit" class="btn" data-action="next">Next</button></div>
+        <div class="btn-row"><button type="button" class="btn" data-action="back" data-zh="上一步">Back</button><button type="submit" class="btn" data-action="next" data-zh="下一步">Next</button></div>
         <p class="error form-status" role="alert"></p>
       </div>
     </form>

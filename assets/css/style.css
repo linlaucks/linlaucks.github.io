@@ -30,6 +30,7 @@
   /* Type scale (design pt values) */
   --fs-nav-title: calc(30 * var(--u));
   --fs-nav-link: calc(18 * var(--u));
+  --nav-link-size: var(--fs-nav-link);
   --fs-title: calc(38 * var(--u));
   --fs-sub: calc(25 * var(--u));
   --fs-text: calc(20 * var(--u));
@@ -61,7 +62,7 @@
   :root {
     --u: 0.75px;
     --fs-text: 15px;
-    --fs-nav-title: calc(78vw / var(--title-ratio));
+    --fs-nav-title: calc(76vw / var(--title-ratio));
   }
 }
 
@@ -106,6 +107,7 @@ a { color: inherit; }
 }
 
 .nav-band {
+  position: relative;
   background: var(--peach);
   margin-bottom: calc(4 * var(--u));
   padding: calc(15 * var(--u)) var(--sp-m) calc(11 * var(--u));
@@ -135,8 +137,10 @@ a { color: inherit; }
 .nav-links {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-top: calc(5 * var(--u));
-  font-size: var(--fs-nav-link);
+  font-size: var(--nav-link-size);
+  height: calc(var(--nav-link-size) * 1.2); /* fixed so both languages give the same nav height */
   line-height: 1.2;
   white-space: nowrap;
 }
@@ -150,7 +154,8 @@ a { color: inherit; }
 
 @media (max-width: 700px) {
   .nav-band { padding-top: 16px; padding-bottom: 11px; }
-  .nav-links { font-size: clamp(12px, 3.5vw, 15px); margin-top: 6px; }
+  :root { --nav-link-size: clamp(12px, 3.5vw, 15px); }
+  .nav-links { margin-top: 6px; }
 }
 
 /* ---------- Patterned background (all pages except home) ---------- */
@@ -642,3 +647,166 @@ body.lightbox-open { overflow: hidden; }
 .hero-slide:nth-of-type(5) { object-position: 56% 50%; }
 
 
+
+
+/* =========================================================
+   中文 (Simplified Chinese)
+   Uses Noto Sans SC on every device, trimmed to the characters on
+   this site so it stays small. (Microsoft JhengHei is a Traditional
+   Chinese font and is missing some Simplified characters.)
+   Sizes are scaled from the English styles so the hierarchy stays
+   the same: Chinese characters read larger than Latin letters at
+   the same font size.
+   ========================================================= */
+@font-face { font-family: "Noto Sans SC Subset"; font-weight: 400; font-display: swap;
+  src: url("../fonts/noto-sans-sc-subset-400.woff2") format("woff2");
+  unicode-range: U+2E80-9FFF, U+F900-FAFF, U+FE30-FE4F, U+FF00-FFEF; }
+@font-face { font-family: "Noto Sans SC Subset"; font-weight: 700; font-display: swap;
+  src: url("../fonts/noto-sans-sc-subset-700.woff2") format("woff2");
+  unicode-range: U+2E80-9FFF, U+F900-FAFF, U+FE30-FE4F, U+FF00-FFEF; }
+
+:root {
+  /* Latin text inside Chinese (names, places) uses the device's sans-serif */
+  --zh: "Noto Sans SC Subset", "Microsoft YaHei UI", "Microsoft YaHei", "PingFang SC", "Noto Sans SC", sans-serif;
+}
+
+/* Hide text for a moment while a saved Chinese preference is applied */
+html.i18n-pending .nav-links,
+html.i18n-pending .lang-toggle,
+html.i18n-pending main { visibility: hidden; }
+
+/* Language toggle (top right of the nav bar) */
+.lang-toggle {
+  position: absolute;
+  top: 50%;
+  right: max(14px, calc(30 * var(--u)));
+  transform: translateY(-50%);
+  padding: 0.3em 0.75em 0.25em;
+  border: 1px solid rgba(58, 44, 44, 0.55);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink);
+  font-family: var(--zh);
+  font-size: max(12px, calc(15 * var(--u)));
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+}
+.lang-toggle:hover { background: rgba(255, 255, 255, 0.55); }
+.lang-toggle:focus-visible { outline: 2px solid var(--muted); outline-offset: 2px; }
+html.zh .lang-toggle { font-family: var(--sans); font-weight: 400; }
+@media (max-width: 700px) {
+  .lang-toggle { right: 4px; padding: 3px 5px 2px; font-size: 11px; letter-spacing: 0; }
+}
+
+/* Names in the nav: 林琦悦 + 柳艾奇
+   Same font size and line height as the English names, so the nav bar
+   keeps its size. The space around the "+" grows to fill the rest of the
+   width, so the names start and end exactly where the English names do
+   (6 characters at 1em each; the "+" box takes the remaining width). */
+html.zh .nav-title {
+  font-family: var(--zh);
+  font-style: normal;
+  font-weight: 400;
+  font-size: var(--fs-nav-title);
+  line-height: 1.15;
+  height: calc(var(--fs-nav-title) * 1.15);
+  letter-spacing: 0;
+}
+html.zh .is-home .nav-title { font-weight: 700; }
+html.zh .nav-title .plus {
+  display: inline-block;
+  width: calc(var(--frame) - 6em);
+  padding: 0;
+  text-align: center;
+}
+
+/* Main titles: bold */
+html.zh .title {
+  font-family: var(--zh);
+  font-style: normal;
+  font-weight: 700;
+  font-size: max(22px, calc(var(--fs-title) * 0.78));
+  letter-spacing: 0.1em;
+  line-height: 1.25;
+}
+
+/* Everything else: regular */
+html.zh .nav-links,
+html.zh .sub,
+html.zh .text,
+html.zh .list,
+html.zh .rates,
+html.zh .schedule,
+html.zh .question,
+html.zh .help,
+html.zh .option,
+html.zh .btn,
+html.zh .error,
+html.zh .lightbox-hint { font-family: var(--zh); }
+
+html.zh .nav-links { font-size: max(12px, calc(var(--nav-link-size) * 0.9)); letter-spacing: 0.08em; }
+html.zh .nav-links a,
+html.zh .nav-links .sep { font-weight: 400; }
+html.zh .nav-links a[aria-current] { font-weight: 700; }
+
+html.zh .sub {
+  font-weight: 400;
+  font-size: max(16px, calc(var(--fs-sub) * 0.84));
+  letter-spacing: 0.08em;
+  line-height: 1.35;
+}
+
+html.zh .text,
+html.zh .list,
+html.zh .rates,
+html.zh .schedule,
+html.zh .help {
+  font-weight: 400;
+  font-size: max(14px, calc(var(--fs-text) * 0.85));
+  letter-spacing: 0.03em;
+  line-height: 1.5;
+}
+html.zh .schedule dt { font-style: normal; }
+html.zh .schedule dd { letter-spacing: 0.05em; }
+
+html.zh .question {
+  font-weight: 400;
+  font-size: max(15px, calc(var(--fs-question) * 0.8));
+  line-height: 1.45;
+}
+html.zh .option,
+html.zh .check-grid .option {
+  font-size: max(14px, calc(var(--fs-option) * 0.85));
+  letter-spacing: 0.05em;
+}
+html.zh .option span { padding-top: 0; }
+
+html.zh .btn {
+  font-weight: 400;
+  font-size: max(14px, calc(var(--fs-button) * 0.8));
+  letter-spacing: 0.1em;
+  padding: calc(5 * var(--u)) calc(20 * var(--u)) calc(4 * var(--u));
+}
+
+/* Home page date in Chinese (location stays in English) */
+.hero-date-zh { display: none; margin: 0; text-align: center; color: rgb(243, 227, 211); }
+html.zh .hero-date img { display: none; }
+html.zh .hero-date-zh { display: block; }
+.hero-date-zh .d {
+  display: block;
+  font-family: var(--zh);
+  font-weight: 700;
+  font-size: calc(var(--frame) * 0.112);
+  letter-spacing: 0.06em;
+  line-height: 1.15;
+}
+.hero-date-zh .loc {
+  display: block;
+  margin-top: 0.9em;
+  font-family: var(--sans);
+  font-weight: 400;
+  font-size: calc(var(--frame) * 0.04);
+  letter-spacing: 0.03em;
+  line-height: 1.25;
+}

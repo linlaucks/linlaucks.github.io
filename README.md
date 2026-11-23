@@ -32,3 +32,17 @@ A plain HTML/CSS/JavaScript site. No build tools are needed: edit a file, commit
 
 - Pages include `<meta name="robots" content="noindex">` so search engines won't list the site. Remove it from each page if you want it to be searchable.
 - Fonts (Cormorant, Josefin Sans) are hosted in `assets/fonts/` under the SIL Open Font License.
+
+## English / 中文
+
+- The toggle in the top right of the nav bar switches between English and Simplified Chinese; the choice is remembered on each device.
+- Every translated element carries its Chinese text in a `data-zh` attribute, right next to the English:
+  ```html
+  <h2 class="sub" data-zh="其他选择">OTHER OPTIONS</h2>
+  ```
+  **When you change English text, update its `data-zh` too.** An element without `data-zh` stays in English in both modes (used for location names).
+- The names in the nav (`林琦悦 + 柳艾奇`) are in the `data-zh` of `.nav-title`. They use the same size as the English names, and the space around the "+" stretches so they start and end exactly where the English names do.
+- Image descriptions use `data-zh-alt` / `data-zh-aria-label` the same way.
+- Messages created by the scripts (form errors, "Sending…", etc.) are translated at the top of `assets/js/i18n.js`.
+- Chinese text uses `assets/fonts/noto-sans-sc-subset-*.woff2`, a copy of Noto Sans SC (SIL Open Font License) trimmed to the characters on the site. New characters you add still display, using the device's own Chinese font.
+- The Bridal Party pages are encrypted with both languages inside, so their text can only be changed by re-encrypting.

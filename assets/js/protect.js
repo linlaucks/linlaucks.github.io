@@ -6,6 +6,8 @@
 // so the other Bridal Party pages open without asking again.
 (function () {
   var STORE = "linlaucks-bridal-key";
+  function t(s) { return window.I18N ? window.I18N.t(s) : s; }
+
   var locked = document.getElementById("locked");
   if (!locked) return;
 
@@ -47,6 +49,7 @@
 
   function reveal(html) {
     main.innerHTML = html;
+    document.dispatchEvent(new Event("contentrevealed"));
     document.documentElement.classList.remove("is-locked");
   }
 
@@ -75,14 +78,14 @@
     e.preventDefault();
     err.textContent = "";
     var pw = input.value;
-    if (!pw) { err.textContent = "Please enter the password."; return; }
+    if (!pw) { err.textContent = t("Please enter the password."); return; }
     btn.disabled = true;
     deriveRaw(pw)
       .then(function (raw) {
         return decryptWith(raw).then(function (html) { remember(raw); reveal(html); });
       })
       .catch(function () {
-        err.textContent = "That password isn’t right. Please try again.";
+        err.textContent = t("That password isn’t right. Please try again.");
         input.select();
       })
       .then(function () { btn.disabled = false; });

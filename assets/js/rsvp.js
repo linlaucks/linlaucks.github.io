@@ -20,6 +20,8 @@
                 "hotel", "roommate", "dietary", "dietaryOther", "cake", "alcohol"];
 
   var root = document.body.getAttribute("data-root") || "/";
+  function t(s) { return window.I18N ? window.I18N.t(s) : s; }
+
 
   // ---------- storage ----------
   var memory = {};
@@ -96,9 +98,10 @@
       group.classList.toggle("is-disabled", no);
       group.setAttribute("aria-disabled", no ? "true" : "false");
       Array.prototype.forEach.call(group.querySelectorAll("input, textarea"), function (el) { el.disabled = no; });
-      nextBtn.textContent = no ? "Submit" : "Next";
+      nextBtn.textContent = no ? t("Submit") : t("Next");
     };
     form.addEventListener("change", function (e) { if (e.target.name === "attending") syncAttending(); });
+    document.addEventListener("langchange", syncAttending);
     syncAttending();
   }
 
@@ -126,12 +129,12 @@
     form.querySelectorAll(".error").forEach(function (el) { el.textContent = ""; });
     if (step === "start") {
       if (!fd.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(fd.email)) {
-        setError("email", "Please enter a valid email address."); ok = false;
+        setError("email", t("Please enter a valid email address.")); ok = false;
       }
-      if (!fd.attending) { setError("attending", "Please let us know if you can make it."); ok = false; }
+      if (!fd.attending) { setError("attending", t("Please let us know if you can make it.")); ok = false; }
       if (fd.attending === "Yes") {
-        if (!fd.names) { setError("names", "Please list who will be attending."); ok = false; }
-        if (!fd.role) { setError("role", "Please choose yes or no."); ok = false; }
+        if (!fd.names) { setError("names", t("Please list who will be attending.")); ok = false; }
+        if (!fd.role) { setError("role", t("Please choose yes or no.")); ok = false; }
       }
     }
     if (!ok) {
@@ -178,7 +181,7 @@
     btns.forEach(function (b) { b.disabled = true; });
     var submitBtn = form.querySelector('[type="submit"]');
     var label = submitBtn.textContent;
-    submitBtn.textContent = "Sending…";
+    submitBtn.textContent = t("Sending…");
     status("");
 
     var body = new URLSearchParams();
@@ -197,7 +200,7 @@
         sending = false;
         btns.forEach(function (b) { b.disabled = false; });
         submitBtn.textContent = label;
-        status("Sorry, something went wrong sending your RSVP. Please check your connection and try again.");
+        status(t("Sorry, something went wrong sending your RSVP. Please check your connection and try again."));
       });
   }
 

@@ -4,13 +4,15 @@
 // - Tap the dark background, the × button, or press Esc to close
 (function () {
   var MAX_SCALE = 8;
+  function t(s) { return window.I18N ? window.I18N.t(s) : s; }
+
 
   function openLightbox(src, alt, trigger) {
     var box = document.createElement("div");
     box.className = "lightbox";
     box.setAttribute("role", "dialog");
     box.setAttribute("aria-modal", "true");
-    box.setAttribute("aria-label", alt || "Enlarged image");
+    box.setAttribute("aria-label", alt || t("Enlarged image"));
 
     var img = document.createElement("img");
     img.className = "lightbox-img";
@@ -20,14 +22,14 @@
     var close = document.createElement("button");
     close.type = "button";
     close.className = "lightbox-close";
-    close.setAttribute("aria-label", "Close");
+    close.setAttribute("aria-label", t("Close"));
     close.innerHTML = "&times;";
 
     var hint = document.createElement("div");
     hint.className = "lightbox-hint";
     hint.textContent = window.matchMedia("(pointer: coarse)").matches
-      ? "Pinch to zoom · Tap outside to close"
-      : "Scroll to zoom · Drag to move · Click outside to close";
+      ? t("Pinch to zoom · Tap outside to close")
+      : t("Scroll to zoom · Drag to move · Click outside to close");
 
     box.appendChild(img);
     box.appendChild(close);

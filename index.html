@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <script>try{if(localStorage.getItem('linlaucks-lang')==='zh'){var h=document.documentElement;h.classList.add('zh','i18n-pending');h.lang='zh-Hans';setTimeout(function(){h.classList.remove('i18n-pending')},2500)}}catch(e){}</script>
   <title>Joyce Lin + Ayrton Laucks</title>
   <meta name="description" content="Wedding of Joyce Lin and Ayrton Laucks, 10 July 2027, Columbus Park Refectory, Chicago, IL.">
   <meta name="robots" content="noindex, nofollow">
@@ -12,26 +13,29 @@
   <link rel="preload" href="./assets/fonts/cormorant-latin-600-italic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="./assets/fonts/josefin-sans-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="./assets/css/style.css">
+  <script src="./assets/js/i18n.js" defer></script>
   <script src="./assets/js/home.js" defer></script>
 </head>
 <body class="is-home" data-root="./">
   <header class="site-header">
     <div class="nav-band">
       <div class="nav-frame">
-        <a class="nav-title" href="./">JOYCE LIN<span class="plus">+</span>AYRTON LAUCKS</a>
-        <nav class="nav-links" aria-label="Main"><a href="./details/">Details</a><span class="sep" aria-hidden="true">-</span><a href="./rsvp/">RSVP</a><span class="sep" aria-hidden="true">-</span><a href="./bridal-party/">Bridal Party</a><span class="sep" aria-hidden="true">-</span><a href="./registry/">Registry</a></nav>
+        <a class="nav-title" href="./" data-zh="林琦悦&lt;span class=&quot;plus&quot;&gt;+&lt;/span&gt;柳艾奇">JOYCE LIN<span class="plus">+</span>AYRTON LAUCKS</a>
+        <nav class="nav-links" aria-label="Main" data-zh-aria-label="主菜单"><a href="./details/" data-zh="婚礼信息">Details</a><span class="sep" aria-hidden="true">-</span><a href="./rsvp/" data-zh="回复出席">RSVP</a><span class="sep" aria-hidden="true">-</span><a href="./bridal-party/" data-zh="伴郎伴娘">Bridal Party</a><span class="sep" aria-hidden="true">-</span><a href="./registry/" data-zh="礼物清单">Registry</a></nav>
       </div>
+      <button type="button" class="lang-toggle" data-lang-toggle lang="zh-Hans" aria-label="Switch to Chinese" data-zh-aria-label="切换至英文" data-zh="EN">中文</button>
     </div>
   </header>
   <main class="hero" id="main">
-    <img class="hero-slide is-active" src="./assets/img/hero-1-1920.webp" srcset="./assets/img/hero-1-1080.webp 1080w, ./assets/img/hero-1-1920.webp 1920w" sizes="100vw" alt="Joyce and Ayrton walking past an ivy-covered wall" decoding="async" fetchpriority="high">
+    <img class="hero-slide is-active" src="./assets/img/hero-1-1920.webp" srcset="./assets/img/hero-1-1080.webp 1080w, ./assets/img/hero-1-1920.webp 1920w" sizes="100vw" alt="Joyce and Ayrton walking past an ivy-covered wall" decoding="async" fetchpriority="high" data-zh-alt="Joyce 与 Ayrton 走过爬满常春藤的墙边">
     <img class="hero-slide" src="./assets/img/hero-2-1920.webp" srcset="./assets/img/hero-2-1080.webp 1080w, ./assets/img/hero-2-1920.webp 1920w" sizes="100vw" alt="" decoding="async" loading="lazy">
     <img class="hero-slide" src="./assets/img/hero-3-1920.webp" srcset="./assets/img/hero-3-1080.webp 1080w, ./assets/img/hero-3-1920.webp 1920w" sizes="100vw" alt="" decoding="async" loading="lazy">
     <img class="hero-slide" src="./assets/img/hero-4-1920.webp" srcset="./assets/img/hero-4-1080.webp 1080w, ./assets/img/hero-4-1920.webp 1920w" sizes="100vw" alt="" decoding="async" loading="lazy">
     <img class="hero-slide" src="./assets/img/hero-5-1920.webp" srcset="./assets/img/hero-5-1080.webp 1080w, ./assets/img/hero-5-1920.webp 1920w" sizes="100vw" alt="" decoding="async" loading="lazy">
     <div class="hero-date">
       <img src="./assets/img/date.png" alt="" width="1931" height="613">
-      <h1 class="visually-hidden">10 July 2027 — Columbus Park Refectory, Chicago, IL</h1>
+      <p class="hero-date-zh" aria-hidden="true"><span class="d">2027年7月10日</span><span class="loc">COLUMBUS PARK REFECTORY<br>CHICAGO, IL</span></p>
+      <h1 class="visually-hidden" data-zh="2027年7月10日 — Columbus Park Refectory, Chicago, IL">10 July 2027 — Columbus Park Refectory, Chicago, IL</h1>
     </div>
   </main>
 </body>

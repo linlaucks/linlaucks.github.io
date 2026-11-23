@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Page not found | Joyce Lin + Ayrton Laucks</title>
+  <script>try{if(localStorage.getItem('linlaucks-lang')==='zh'){var h=document.documentElement;h.classList.add('zh','i18n-pending');h.lang='zh-Hans';setTimeout(function(){h.classList.remove('i18n-pending')},2500)}}catch(e){}</script>
+  <title data-zh="找不到页面 | Joyce Lin + Ayrton Laucks">Page not found | Joyce Lin + Ayrton Laucks</title>
   <meta name="description" content="Wedding of Joyce Lin and Ayrton Laucks, 10 July 2027, Columbus Park Refectory, Chicago, IL.">
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#f3e3d3">
@@ -12,22 +13,24 @@
   <link rel="preload" href="/assets/fonts/cormorant-latin-600-italic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/josefin-sans-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/css/style.css">
+  <script src="/assets/js/i18n.js" defer></script>
 
 </head>
 <body class="has-pattern" data-root="/">
   <header class="site-header">
     <div class="nav-band">
       <div class="nav-frame">
-        <a class="nav-title" href="/">JOYCE LIN<span class="plus">+</span>AYRTON LAUCKS</a>
-        <nav class="nav-links" aria-label="Main"><a href="/details/">Details</a><span class="sep" aria-hidden="true">-</span><a href="/rsvp/">RSVP</a><span class="sep" aria-hidden="true">-</span><a href="/bridal-party/">Bridal Party</a><span class="sep" aria-hidden="true">-</span><a href="/registry/">Registry</a></nav>
+        <a class="nav-title" href="/" data-zh="林琦悦&lt;span class=&quot;plus&quot;&gt;+&lt;/span&gt;柳艾奇">JOYCE LIN<span class="plus">+</span>AYRTON LAUCKS</a>
+        <nav class="nav-links" aria-label="Main" data-zh-aria-label="主菜单"><a href="/details/" data-zh="婚礼信息">Details</a><span class="sep" aria-hidden="true">-</span><a href="/rsvp/" data-zh="回复出席">RSVP</a><span class="sep" aria-hidden="true">-</span><a href="/bridal-party/" data-zh="伴郎伴娘">Bridal Party</a><span class="sep" aria-hidden="true">-</span><a href="/registry/" data-zh="礼物清单">Registry</a></nav>
       </div>
+      <button type="button" class="lang-toggle" data-lang-toggle lang="zh-Hans" aria-label="Switch to Chinese" data-zh-aria-label="切换至英文" data-zh="EN">中文</button>
     </div>
   </header>
   <div class="page-bg">
   <main class="content" id="main">
-    <h1 class="title">PAGE NOT FOUND</h1>
-    <p class="text text--center">Sorry, we couldn’t find that page.</p>
-    <div class="btn-row"><a class="btn" href="/">Home</a></div>
+    <h1 class="title" data-zh="找不到页面">PAGE NOT FOUND</h1>
+    <p class="text text--center" data-zh="抱歉，找不到这个页面。">Sorry, we couldn’t find that page.</p>
+    <div class="btn-row"><a class="btn" href="/" data-zh="返回首页">Home</a></div>
   </main>
   </div>
 </body>

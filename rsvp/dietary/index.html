@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>RSVP | Joyce Lin + Ayrton Laucks</title>
+  <script>try{if(localStorage.getItem('linlaucks-lang')==='zh'){var h=document.documentElement;h.classList.add('zh','i18n-pending');h.lang='zh-Hans';setTimeout(function(){h.classList.remove('i18n-pending')},2500)}}catch(e){}</script>
+  <title data-zh="回复出席 | Joyce Lin + Ayrton Laucks">RSVP | Joyce Lin + Ayrton Laucks</title>
   <meta name="description" content="Wedding of Joyce Lin and Ayrton Laucks, 10 July 2027, Columbus Park Refectory, Chicago, IL.">
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#f3e3d3">
@@ -12,38 +13,40 @@
   <link rel="preload" href="../../assets/fonts/cormorant-latin-600-italic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="../../assets/fonts/josefin-sans-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="../../assets/css/style.css">
+  <script src="../../assets/js/i18n.js" defer></script>
   <script src="../../assets/js/rsvp.js" defer></script>
 </head>
 <body class="has-pattern rsvp-page" data-root="../../">
   <header class="site-header">
     <div class="nav-band">
       <div class="nav-frame">
-        <a class="nav-title" href="../../">JOYCE LIN<span class="plus">+</span>AYRTON LAUCKS</a>
-        <nav class="nav-links" aria-label="Main"><a href="../../details/">Details</a><span class="sep" aria-hidden="true">-</span><a href="../../rsvp/" aria-current="page">RSVP</a><span class="sep" aria-hidden="true">-</span><a href="../../bridal-party/">Bridal Party</a><span class="sep" aria-hidden="true">-</span><a href="../../registry/">Registry</a></nav>
+        <a class="nav-title" href="../../" data-zh="林琦悦&lt;span class=&quot;plus&quot;&gt;+&lt;/span&gt;柳艾奇">JOYCE LIN<span class="plus">+</span>AYRTON LAUCKS</a>
+        <nav class="nav-links" aria-label="Main" data-zh-aria-label="主菜单"><a href="../../details/" data-zh="婚礼信息">Details</a><span class="sep" aria-hidden="true">-</span><a href="../../rsvp/" aria-current="page" data-zh="回复出席">RSVP</a><span class="sep" aria-hidden="true">-</span><a href="../../bridal-party/" data-zh="伴郎伴娘">Bridal Party</a><span class="sep" aria-hidden="true">-</span><a href="../../registry/" data-zh="礼物清单">Registry</a></nav>
       </div>
+      <button type="button" class="lang-toggle" data-lang-toggle lang="zh-Hans" aria-label="Switch to Chinese" data-zh-aria-label="切换至英文" data-zh="EN">中文</button>
     </div>
   </header>
   <div class="page-bg">
   <main class="content" id="main">
-    <h1 class="title">RSVP</h1>
+    <h1 class="title" data-zh="回复出席">RSVP</h1>
     <form class="rsvp-form" data-step="dietary" novalidate>
       
       <fieldset class="field" data-field="dietary">
-        <legend class="question">Do you have any food allergies / restrictions?</legend>
-        <p class="help">We will do our best to accommodate all allergies and food restrictions. All food items will have a corresponding label for allergies and food restrictions.</p>
-        <div class="check-grid"><label class="option"><input type="checkbox" name="dietary" value="Tree Nuts"><span>TREE NUTS</span></label><label class="option"><input type="checkbox" name="dietary" value="Soy"><span>SOY</span></label><label class="option"><input type="checkbox" name="dietary" value="Peanuts"><span>PEANUTS</span></label><label class="option"><input type="checkbox" name="dietary" value="Shellfish"><span>SHELLFISH</span></label><label class="option"><input type="checkbox" name="dietary" value="Dairy"><span>DAIRY</span></label><label class="option"><input type="checkbox" name="dietary" value="Fish"><span>FISH</span></label><label class="option"><input type="checkbox" name="dietary" value="Eggs"><span>EGGS</span></label><label class="option"><input type="checkbox" name="dietary" value="Sesame"><span>SESAME</span></label></div>
-        <div class="check-grid"><label class="option"><input type="checkbox" name="dietary" value="Gluten-Free"><span>GLUTEN-FREE</span></label><label class="option"><input type="checkbox" name="dietary" value="Kosher"><span>KOSHER</span></label><label class="option"><input type="checkbox" name="dietary" value="Vegetarian"><span>VEGETARIAN</span></label><label class="option"><input type="checkbox" name="dietary" value="Halal"><span>HALAL</span></label><label class="option"><input type="checkbox" name="dietary" value="Vegan"><span>VEGAN</span></label><label class="option"><input type="checkbox" name="dietary" value="Pescatarian"><span>PESCATARIAN</span></label></div>
+        <legend class="question" data-zh="您是否有任何食物过敏或饮食限制？">Do you have any food allergies / restrictions?</legend>
+        <p class="help" data-zh="我们会尽力配合所有过敏与饮食需求。所有餐点都会标示相关的过敏原与饮食信息。">We will do our best to accommodate all allergies and food restrictions. All food items will have a corresponding label for allergies and food restrictions.</p>
+        <div class="check-grid"><label class="option"><input type="checkbox" name="dietary" value="Tree Nuts"><span data-zh="坚果">TREE NUTS</span></label><label class="option"><input type="checkbox" name="dietary" value="Soy"><span data-zh="大豆">SOY</span></label><label class="option"><input type="checkbox" name="dietary" value="Peanuts"><span data-zh="花生">PEANUTS</span></label><label class="option"><input type="checkbox" name="dietary" value="Shellfish"><span data-zh="贝类海鲜">SHELLFISH</span></label><label class="option"><input type="checkbox" name="dietary" value="Dairy"><span data-zh="乳制品">DAIRY</span></label><label class="option"><input type="checkbox" name="dietary" value="Fish"><span data-zh="鱼类">FISH</span></label><label class="option"><input type="checkbox" name="dietary" value="Eggs"><span data-zh="鸡蛋">EGGS</span></label><label class="option"><input type="checkbox" name="dietary" value="Sesame"><span data-zh="芝麻">SESAME</span></label></div>
+        <div class="check-grid"><label class="option"><input type="checkbox" name="dietary" value="Gluten-Free"><span data-zh="无麸质">GLUTEN-FREE</span></label><label class="option"><input type="checkbox" name="dietary" value="Kosher"><span data-zh="犹太洁食">KOSHER</span></label><label class="option"><input type="checkbox" name="dietary" value="Vegetarian"><span data-zh="素食">VEGETARIAN</span></label><label class="option"><input type="checkbox" name="dietary" value="Halal"><span data-zh="清真">HALAL</span></label><label class="option"><input type="checkbox" name="dietary" value="Vegan"><span data-zh="纯素">VEGAN</span></label><label class="option"><input type="checkbox" name="dietary" value="Pescatarian"><span data-zh="海鲜素">PESCATARIAN</span></label></div>
         <div class="other-row">
-          <label class="option"><input type="checkbox" name="dietary" value="Other" id="dietary-other-check"><span>OTHER:</span></label>
-          <input class="input" type="text" name="dietaryOther" aria-label="Other allergy or restriction">
+          <label class="option"><input type="checkbox" name="dietary" value="Other" id="dietary-other-check"><span data-zh="其他：">OTHER:</span></label>
+          <input class="input" type="text" name="dietaryOther" aria-label="Other allergy or restriction" data-zh-aria-label="其他过敏或饮食限制">
         </div>
         <div class="none-row">
-          <label class="option"><input type="checkbox" class="round" name="dietary" value="None" id="dietary-none"><span>NONE</span></label>
+          <label class="option"><input type="checkbox" class="round" name="dietary" value="None" id="dietary-none"><span data-zh="无">NONE</span></label>
         </div>
       </fieldset>
       <div class="hp" aria-hidden="true"><label>Leave this empty <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
       <div class="form-actions">
-        <div class="btn-row"><button type="button" class="btn" data-action="back">Back</button><button type="submit" class="btn" data-action="next">Next</button></div>
+        <div class="btn-row"><button type="button" class="btn" data-action="back" data-zh="上一步">Back</button><button type="submit" class="btn" data-action="next" data-zh="下一步">Next</button></div>
         <p class="error form-status" role="alert"></p>
       </div>
     </form>

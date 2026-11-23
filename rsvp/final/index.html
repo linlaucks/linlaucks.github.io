@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>RSVP | Joyce Lin + Ayrton Laucks</title>
+  <script>try{if(localStorage.getItem('linlaucks-lang')==='zh'){var h=document.documentElement;h.classList.add('zh','i18n-pending');h.lang='zh-Hans';setTimeout(function(){h.classList.remove('i18n-pending')},2500)}}catch(e){}</script>
+  <title data-zh="回复出席 | Joyce Lin + Ayrton Laucks">RSVP | Joyce Lin + Ayrton Laucks</title>
   <meta name="description" content="Wedding of Joyce Lin and Ayrton Laucks, 10 July 2027, Columbus Park Refectory, Chicago, IL.">
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#f3e3d3">
@@ -12,30 +13,32 @@
   <link rel="preload" href="../../assets/fonts/cormorant-latin-600-italic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="../../assets/fonts/josefin-sans-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="../../assets/css/style.css">
+  <script src="../../assets/js/i18n.js" defer></script>
   <script src="../../assets/js/rsvp.js" defer></script>
 </head>
 <body class="has-pattern rsvp-page" data-root="../../">
   <header class="site-header">
     <div class="nav-band">
       <div class="nav-frame">
-        <a class="nav-title" href="../../">JOYCE LIN<span class="plus">+</span>AYRTON LAUCKS</a>
-        <nav class="nav-links" aria-label="Main"><a href="../../details/">Details</a><span class="sep" aria-hidden="true">-</span><a href="../../rsvp/" aria-current="page">RSVP</a><span class="sep" aria-hidden="true">-</span><a href="../../bridal-party/">Bridal Party</a><span class="sep" aria-hidden="true">-</span><a href="../../registry/">Registry</a></nav>
+        <a class="nav-title" href="../../" data-zh="林琦悦&lt;span class=&quot;plus&quot;&gt;+&lt;/span&gt;柳艾奇">JOYCE LIN<span class="plus">+</span>AYRTON LAUCKS</a>
+        <nav class="nav-links" aria-label="Main" data-zh-aria-label="主菜单"><a href="../../details/" data-zh="婚礼信息">Details</a><span class="sep" aria-hidden="true">-</span><a href="../../rsvp/" aria-current="page" data-zh="回复出席">RSVP</a><span class="sep" aria-hidden="true">-</span><a href="../../bridal-party/" data-zh="伴郎伴娘">Bridal Party</a><span class="sep" aria-hidden="true">-</span><a href="../../registry/" data-zh="礼物清单">Registry</a></nav>
       </div>
+      <button type="button" class="lang-toggle" data-lang-toggle lang="zh-Hans" aria-label="Switch to Chinese" data-zh-aria-label="切换至英文" data-zh="EN">中文</button>
     </div>
   </header>
   <div class="page-bg">
   <main class="content" id="main">
-    <h1 class="title">RSVP</h1>
+    <h1 class="title" data-zh="回复出席">RSVP</h1>
     <form class="rsvp-form" data-step="final" novalidate>
       
       <div class="field">
-        <label class="question" for="cake">How many slices of cake do you think you will eat?</label>
+        <label class="question" for="cake" data-zh="您觉得自己会吃几块蛋糕？">How many slices of cake do you think you will eat?</label>
         <input class="input" type="text" id="cake" name="cake" inputmode="numeric" autocomplete="off">
       </div>
-      <fieldset class="field" data-field="alcohol"><legend class="question">Are you looking forward to drinking alcohol?</legend><div class="options"><label class="option"><input type="radio" name="alcohol" value="Yes"><span>YES</span></label><label class="option"><input type="radio" name="alcohol" value="No"><span>NO</span></label></div><p class="error" data-error-for="alcohol"></p></fieldset>
+      <fieldset class="field" data-field="alcohol"><legend class="question" data-zh="您期待喝酒吗？">Are you looking forward to drinking alcohol?</legend><div class="options"><label class="option"><input type="radio" name="alcohol" value="Yes"><span data-zh="是">YES</span></label><label class="option"><input type="radio" name="alcohol" value="No"><span data-zh="否">NO</span></label></div><p class="error" data-error-for="alcohol"></p></fieldset>
       <div class="hp" aria-hidden="true"><label>Leave this empty <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
       <div class="form-actions">
-        <div class="btn-row"><button type="button" class="btn" data-action="back">Back</button><button type="submit" class="btn" data-action="submit">Submit</button></div>
+        <div class="btn-row"><button type="button" class="btn" data-action="back" data-zh="上一步">Back</button><button type="submit" class="btn" data-action="submit" data-zh="提交">Submit</button></div>
         <p class="error form-status" role="alert"></p>
       </div>
     </form>
